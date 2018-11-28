@@ -50,7 +50,7 @@ double Line::distance(Shape s) const
     double *other = s.position();
 
     //Distance-algorithm
-    double dist = abs( sqrt( pow(tmp[0] - other[0], 2) + pow(tmp[1] - other[1], 2) ) );
+    double dist = fabs( sqrt( pow(tmp[0] - other[0], 2) + pow(tmp[1] - other[1], 2) ) );
     return dist;
 }
 

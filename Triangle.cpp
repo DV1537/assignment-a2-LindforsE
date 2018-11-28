@@ -27,8 +27,11 @@ std::string Triangle::getType() const
 
 double Triangle::area() const
 {
-    double tmp;
-    return tmp;
+    // | ( Ax(By - Cy) + Bx(Cy - Ay) + Cx (Ay - By)  ) / 2 |
+    double area = ( (coord[0].x * (coord[1].y - coord[2].y) ) + ( coord[1].x * (coord[2].y - coord[0].y) ) + ( coord[2].x * (coord[0].y - coord[1].y) ) );
+    area *= 0.5;
+    area = std::fabs(area);
+    return area;
 }
 
 double Triangle::circumference() const
@@ -36,11 +39,11 @@ double Triangle::circumference() const
     //AB + BC + CA
 
     //AB coord[0] -> coord[1]
-    double distAB = abs( sqrt( pow(coord[0].x - coord[1].x,2) + pow(coord[0].y - coord[1].y ,2) ) );
+    double distAB = fabs( sqrt( pow(coord[0].x - coord[1].x,2) + pow(coord[0].y - coord[1].y ,2) ) );
     //BC coord[1] -> coord[2]
-    double distBC = abs( sqrt( pow(coord[1].x - coord[2].x,2) + pow(coord[1].y - coord[2].y ,2) ) );
+    double distBC = fabs( sqrt( pow(coord[1].x - coord[2].x,2) + pow(coord[1].y - coord[2].y ,2) ) );
     //CA coord[2] -> coord[0]
-    double distCA = abs( sqrt( pow(coord[2].x - coord[0].x,2) + pow(coord[2].y - coord[0].y ,2) ) );
+    double distCA = fabs( sqrt( pow(coord[2].x - coord[0].x,2) + pow(coord[2].y - coord[0].y ,2) ) );
 
     return distAB + distBC + distCA;
 }
@@ -62,7 +65,7 @@ double Triangle::distance(Shape s) const
     double *other = s.position();
 
     //Distance-algorithm
-    double dist = abs( sqrt( pow(tmp[0] - other[0], 2) + pow(tmp[1] - other[1], 2) ) );
+    double dist = fabs( sqrt( pow(tmp[0] - other[0], 2) + pow(tmp[1] - other[1], 2) ) );
     return dist;
 }
 

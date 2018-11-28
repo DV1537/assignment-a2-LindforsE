@@ -16,7 +16,7 @@ private:
 
 public:
 
-    Polygon(const double * arr);
+    Polygon(double arr[], int);
     ~Polygon();
 
     //Inherited functions

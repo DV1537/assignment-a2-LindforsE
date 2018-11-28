@@ -1,4 +1,4 @@
-#ifndef TRANGLE_H
+#ifndef TRIANGLE_H
 #define TRIANGLE_H
 #include "Shape.h"
 
