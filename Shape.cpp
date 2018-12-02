@@ -1,3 +1,4 @@
+/*
 #include "Shape.h"
 #include "Point.h"
 
@@ -29,3 +30,4 @@ bool Shape::isConvex() const
 {
     return false;
 }
+*/

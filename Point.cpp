@@ -39,7 +39,7 @@ double* Point::position() const
     return tmp;
 }
 
-double Point::distance(Shape s) const
+double Point::distance(const Shape & s)
 {
     //center-coordinates of other shape
     double *tmp = s.position();

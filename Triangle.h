@@ -1,4 +1,4 @@
-#ifndef TRIANGLE_H
+#ifndef TRiANGLE_H
 #define TRIANGLE_H
 #include "Shape.h"
 
@@ -24,7 +24,7 @@ public:
     virtual double area() const;
     virtual double circumference() const;
     virtual double* position() const;
-    virtual double distance(Shape s) const;
+    virtual double distance(const Shape & s);
     virtual bool isConvex() const;
 
 };

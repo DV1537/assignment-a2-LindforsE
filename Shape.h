@@ -11,13 +11,14 @@ class Shape
 
 public:
     
-    virtual std::string getType() const;
-    virtual double area() const;
-    virtual double circumference() const;
-    virtual double* position() const;
-    virtual double distance(Shape s) const;
+    virtual std::string getType() const = 0;
+    virtual double area() const = 0;
+    virtual double circumference() const = 0;
+    //virtual Vector2 position() const;
+    virtual double* position() const = 0;
+    virtual double distance(const Shape & s) = 0;
 
-    virtual bool isConvex() const;
+    virtual bool isConvex() const = 0;
 
 };
 

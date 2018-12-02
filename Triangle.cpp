@@ -59,7 +59,7 @@ double* Triangle::position() const
     return tmp;
 }
 
-double Triangle::distance(Shape s) const
+double Triangle::distance(const Shape & s)
 {
     double *tmp = this->position();
     double *other = s.position();

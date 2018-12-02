@@ -44,7 +44,7 @@ double* Line::position() const
     return tmp;
 }
 
-double Line::distance(Shape s) const
+double Line::distance(const Shape & s)
 {
     double *tmp = this->position();
     double *other = s.position();

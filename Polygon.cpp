@@ -120,7 +120,7 @@ double* Polygon::position() const
     return center;
 }
 
-double Polygon::distance(Shape s) const
+double Polygon::distance(const Shape & s)
 {
     double *tmp = this->position();
     double *other = s.position();

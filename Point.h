@@ -23,8 +23,9 @@ public:
     virtual std::string getType() const;
     virtual double area() const;
     virtual double circumference() const;
+    //virtual Vector2 position() const; //Use double array instead of struct Vector2 ??
     virtual double* position() const;
-    virtual double distance(Shape s) const;
+    virtual double distance(const Shape & s);
     virtual bool isConvex() const;
 
 };
